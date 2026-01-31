@@ -1,0 +1,176 @@
+body {
+  background: linear-gradient(135deg, #f8cdda, #e0c3fc);
+}
+
+.bg-pastel {
+  background-color: #f3d9fa;
+}
+
+.text-pastel {
+  color: #7b1fa2;
+}
+
+.btn-pastel {
+  background-color: #f3b6d8;
+  border: none;
+  color: #5a2a4a;
+}
+
+.btn-pastel:hover {
+  background-color: #e8a3cb;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 5px solid #d48ad6;
+}
+
+.project-card {
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.bg-rose {
+  background-color: #f3b6d8;
+}
+
+.bg-lila {
+  background-color: #d6a4e8;
+}
+
+.project-img {
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Grupo botón + nombre */
+.nav-brand-group {
+  gap: 22px; /* separación extra */
+}
+
+/* Botón regresar */
+.btn-back {
+  background-color: #f3b6d8; /* rosa pastel */
+  color: #5a2a4a;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: #e8a3cb;
+  transform: translateX(-4px);
+}
+
+.btn-back i {
+  font-size: 1.1rem;
+}
+
+/* TÍTULOS DE PROYECTOS */
+.project-card .card-title {
+  color: #7b1fa2;            /* mismo lila pastel que tu nombre */
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+/* línea decorativa sutil */
+.project-card .card-title::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  background-color: #f3b6d8; /* rosa pastel que ya usas */
+  margin: 6px auto 0;
+  border-radius: 10px;
+}
+
+/* DESCRIPCIÓN DE PROYECTOS */
+.project-card .card-text {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #5a2a4a;            /* mismo tono de texto pastel */
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* hover suave, misma paleta */
+.project-card:hover .card-title {
+  color: #9c27b0;
+}
+
+footer .btn {
+  min-width: 110px;
+}
+
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación inicial al cargar */
+.profile-img {
+  animation: fadeFloatIn 1.6s ease-out forwards,
+             float 5s ease-in-out infinite;
+}
+
+/* Flotación suave */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Entrada elegante */
+@keyframes fadeFloatIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Reacción al hover */
+.profile-img:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
